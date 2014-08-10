@@ -1,0 +1,17 @@
+<h2>Register as New User</h2>
+<p>We're so glad you're joining us.</p>
+<br />
+
+<%= form_for(@user) do |form| %>
+	<% if @user.errors.any? %>
+		<% @user.errors.full_messages.each do |msg| %>
+			<p><%= msg %></p>
+		<% end %>
+		<br />
+	<% end %>
+
+	<ul><%= label(:user, :first_name) %>: <%= form.text_field(:first_name) %></ul>
+	<ul><%= label(:user, :last_name) %>: <%= form.text_field(:last_name) %></ul>
+	<ul><%= label(:user, :email) %>: <%= form.text_field(:email) %></ul>
+	<ul><%= form.submit %></ul>
+<% end %>

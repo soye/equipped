@@ -1,0 +1,15 @@
+<h1>Login</h1>
+
+<% if flash[:notice] %>
+	<p><%= flash[:notice] %></p>
+	<br />
+<% end %>
+
+<%= form_tag("post_login", method: "post") do %>
+	<%= label_tag(:email, "Email:") %>
+	<%= text_field_tag(:email) %>
+	<br />
+	<%= submit_tag("Login") %>
+<% end %>
+<br />
+<%= link_to "← return to Home", home_index_path %>
