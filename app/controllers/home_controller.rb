@@ -20,7 +20,7 @@ class HomeController < ApplicationController
 			session[:user_last_name] = @user.last_name
 			redirect_to home_index_path
 		else
-			flash[:notice] = "Sorry, the user \"" + params[:username] + "\" does not exist. Try again?"
+			flash[:notice] = "Sorry, the user \"" + params[:email] + "\" does not exist. Try again?"
 			redirect_to home_login_path
 		end
 	end
