@@ -46,3 +46,4 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'actionview-encoded_mail_to'
+gem 'figaro'
