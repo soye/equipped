@@ -2,20 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$font-stack:    Helvetica, sans-serif;
+$header-font-stack: 'Open Sans', Helvetica, sans-serif;
+$body-font-stack: 'Noto Serif', Georgia, serif;
 $primary-color: #333;
 
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
 body {
-  font: 100% $font-stack;
+  font: 100% $body-font-stack;
+  font-size: 16px;
   color: $primary-color;
   width: auto;
   padding: 25px;
 }
 
-#header {
+h1 {
+	font: 100% $header-font-stack;
+	font-size: 64px;
+	font-weight: bold;
 	text-align: center;
 	color: $primary-color;
-	font-size: 36px;
+	letter-spacing: -1px;
 }
 
 #login_header {
